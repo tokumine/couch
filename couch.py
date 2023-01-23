@@ -1,14 +1,14 @@
 # license: MIT
 # ==============================================================================
-# shrink.py - AI conversational assistant that helps you explore your thoughts and feelings
+# couch.py - AI conversational assistant that helps you explore your thoughts and feelings
 # ==============================================================================
-# Use shrink.py as a tool to explore your own thoughts and feelings about things in your life.
-# Shrink.py is not intended to replace real therapy and is not a substitute for professional medical advice, diagnosis or treatment.
+# Use couch.py as a tool to explore your own thoughts and feelings about things in your life.
+# couch.py is not intended to replace real therapy and is not a substitute for professional medical advice, diagnosis or treatment.
 # If you have any concerns about your mental health, please seek professional help.
-# You are responsible for usage of shrink.py and any consequences.
-# If in doubt, DO NOT use shrink.py
-# shrink.py is not intended to be used by children under the age of 13.
-# shrink.py uses OpenAI Whisper, and GPT3 to recognize speech and generate responses.
+# You are responsible for usage of couch.py and any consequences.
+# If in doubt, DO NOT use couch.py
+# couch.py is not intended to be used by children under the age of 13.
+# couch.py uses OpenAI Whisper, and GPT3 to recognize speech and generate responses.
 
 # ==============================================================================
 # Requirements:
@@ -25,9 +25,9 @@
 # 1. Install the requirements
 # 2. Set your OpenAI API key in the code below
 # 3. Set your name, MBTI personality type, spoken languages and generation in the code below
-# 4. Run the code with `sudo python shrink.py` (sudo needed for audio on mac)
+# 4. Run the code with `sudo python couch.py` (sudo needed for audio on mac)
 # 5. Audio will be recorded in a turntaking fashion 
-# 6. Press space to stop recording your turn (first time shrink will download the whisper model)
+# 6. Press space to stop recording your turn (first time couch will download the whisper model)
 # 7. Say "bye" to exit
 
 # ==============================================================================
@@ -45,8 +45,8 @@ import sys
 openai.api_key = "sk-xxxxxxxxxxxxx" # set your OpenAI API key here - https://beta.openai.com/docs/api-reference/authentication
 username = "YOUR NAME"
 situation = "YOUR SITUATION" # eg f"There have been huge layoffs in {username}'s company. {username} is feeling down and needs a friend to talk to."
-MBTI = "YOUR MYERS BRIGGS TYPE" # eg "ENTP or INTP"
-Gen = "The Generation of Shrink" # eg "GenX", "Millenial" or "GenZ" - will affect the personality of Shrink
+MBTI = "YOUR MYERS BRIGGS TYPE" # eg "ENTP or INTP" - will affect how couch responds to you
+Gen = "COUCH GEN" # eg "GenX", "Millenial" or "GenZ" - will affect the personality of couch
 languages = "English" # note: only English is supported at the moment
 
 # internals - ignore
@@ -178,7 +178,7 @@ def ai(prompt):
   return response
 
 
-# Shrink Loop
+# couch Loop
 while True:
   prompt = ""
   if is_test:
