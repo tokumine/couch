@@ -1,6 +1,6 @@
 license: MIT  (see licence file for more information)
 
-# shrink.py - AI voice assistant that helps you explore your thoughts and feelings
+# shrink.py - AI conversational voice assistant for OSX that helps you explore your thoughts and feelings
 shrink.py is a little AI tool to conversationally explore your own thoughts and feelings about things in your life
 
 ## disclaimer
@@ -20,9 +20,9 @@ shrink.py is a little AI tool to conversationally explore your own thoughts and 
 
 ## Usage:
 1. Install the requirements
-2. Set your OpenAI API key in the code below
-3. Set your name, MBTI personality type, spoken languages and generation in the code below
-4. Run the code with `sudo python shrink.py` (sudo needed for audio on mac)
+2. Set your OpenAI API key in shrink.py
+3. Set your name, MBTI personality type, spoken languages and generation in shrink.py
+4. Run: `sudo python shrink.py` (sudo needed for audio on mac)
 5. Audio will be recorded in a turntaking fashion 
 6. Press space to stop recording your turn (first time shrink will download the whisper model)
 7. Say "bye" to exit

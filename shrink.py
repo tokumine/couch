@@ -1,6 +1,6 @@
 # license: MIT
 # ==============================================================================
-# shrink.py - AI assistant that helps you explore your thoughts and feelings
+# shrink.py - AI conversational assistant that helps you explore your thoughts and feelings
 # ==============================================================================
 # Use shrink.py as a tool to explore your own thoughts and feelings about things in your life.
 # Shrink.py is not intended to replace real therapy and is not a substitute for professional medical advice, diagnosis or treatment.
@@ -42,12 +42,12 @@ import os
 import sys
 
 # user settings
-openai.api_key = "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"
-username = "Simon"
-situation = f"There have been huge layoffs in {username}'s company. {username} is feeling down and needs a friend to talk to."
-MBTI = "ENTP or INTP"
-Gen = "GenX"
-languages = "English"
+openai.api_key = "sk-xxxxxxxxxxxxx" # set your OpenAI API key here - https://beta.openai.com/docs/api-reference/authentication
+username = "YOUR NAME"
+situation = "YOUR SITUATION" # eg f"There have been huge layoffs in {username}'s company. {username} is feeling down and needs a friend to talk to."
+MBTI = "YOUR MYERS BRIGGS TYPE" # eg "ENTP or INTP"
+Gen = "The Generation of Shrink" # eg "GenX", "Millenial" or "GenZ" - will affect the personality of Shrink
+languages = "English" # note: only English is supported at the moment
 
 # internals - ignore
 is_test = False
@@ -178,7 +178,7 @@ def ai(prompt):
   return response
 
 
-# Therapist Loop
+# Shrink Loop
 while True:
   prompt = ""
   if is_test:
