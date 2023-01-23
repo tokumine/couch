@@ -1,7 +1,7 @@
 license: MIT  (see licence file for more information)
 
 # couch.py - AI conversational voice assistant that helps you explore your thoughts and feelings
-couch.py is a little AI tool to conversationally explore your own thoughts and feelings about things in your life
+couch.py is a little AI tool to conversationally explore your own thoughts and feelings about things in your life. because it uses voice for input and output, you can lie back on the couch with headphones on and talk things out. it's a little like talking to a therapist. but it's not a therapist. it's just a little AI tool.
 
 ## disclaimer
 1. couch.py is not intended to replace real therapy and is not a substitute for professional medical advice, diagnosis or treatment.
@@ -9,7 +9,7 @@ couch.py is a little AI tool to conversationally explore your own thoughts and f
 3. You are responsible for usage of couch.py and any consequences.
 4. If in doubt, DO NOT use couch.py
 5. couch.py is not intended to be used by children under the age of 13.
-6. couch.py uses OpenAI Whisper, and GPT3 to recognize speech and generate responses.
+6. couch.py uses OpenAI Whisper for ASR to recognize speech, and GPT3 to generate responses.
 
 ## Requirements:
 1. Python 3.x & pip
@@ -17,7 +17,7 @@ couch.py is a little AI tool to conversationally explore your own thoughts and f
 3. OpenAI python library: https://github.com/openai/openai-python
 4. python pyaudio (and it's dependencies): https://cs.gmu.edu/~marks/112/projects/PlaySong.pdf
 5. OpenAI account and API key: https://beta.openai.com/docs/api-reference/authentication
-6. currently uses MacOS "sayTTS" for TTS. So needs OSX. Will change this.
+6. currently uses inbuilt MacOS "sayTTS" for TTS. So needs OSX. Will change this.
 
 ## Usage:
 1. Install the requirements
@@ -30,3 +30,4 @@ couch.py is a little AI tool to conversationally explore your own thoughts and f
 
 ## TODO
 1. fix multilingual 
+2. make TTS less dependent on OSX
