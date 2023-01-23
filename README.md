@@ -1,7 +1,7 @@
 license: MIT  (see licence file for more information)
 
 # couch.py - AI conversational voice assistant that helps you explore your thoughts and feelings
-couch.py is a little AI tool to conversationally explore your own thoughts and feelings about things in your life. because it uses voice for input and output, you can lie back on the couch with headphones on and talk things out. it's a little like talking to a therapist. but it's not a therapist. it's just a little AI tool.
+couch.py is a little AI tool to conversationally explore your own thoughts and feelings about things in your life. because it uses voice for input and output, you can lie back on the couch with headphones on and talk things out. it's a little like talking to a therapist. but it's not a therapist. it's just a little AI tool. unlike a therapist, you can see how it's put together, can talk to it anytime, and keep things private to you (outside the LLM call)
 
 ## disclaimer
 1. couch.py is not intended to replace real therapy and is not a substitute for professional medical advice, diagnosis or treatment.
