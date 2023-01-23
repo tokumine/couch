@@ -1,7 +1,7 @@
 license: MIT  (see licence file for more information)
 
 # couch.py - AI conversational voice assistant that helps you explore your thoughts and feelings
-couch.py is a little AI tool to conversationally explore your own thoughts and feelings about things in your life. because it uses voice for input and output, you can lie back on the couch with headphones on and talk things out. it's a little like talking to a therapist, but it's not a therapist it's just a little AI tool. Also, unlike a therapist, you can see how it's put together and can talk to it anytime. note the LLM call is NOT private so this should not be used to discuss confidential information or information you don't want others to know)
+couch.py is a little AI tool to conversationally explore your own thoughts and feelings about things in your life. because it uses voice for input and output, you can lie back on the couch with headphones on and talk things out. it's NOT a therapist it's just a little AI tool. you can see how it's put together and learn more about conversational systems. note the LLM call is NOT private so this should not be used to discuss confidential information or information you don't want others to know)
 
 ## disclaimer
 1. this is not a confidential service. openai will receive all conversation so do not use it to discuss things you would not want others to know or discuss confidential information
