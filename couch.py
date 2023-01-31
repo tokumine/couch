@@ -40,13 +40,16 @@ import whisper
 import openai
 import os
 import sys
+import requests
+from dotenv import load_dotenv
+load_dotenv()
 
-# user settings
-openai.api_key = "sk-xxxxxxxxxxxxx" # set your OpenAI API key here - https://beta.openai.com/docs/api-reference/authentication
-username = "YOUR NAME"
-situation = "YOUR SITUATION" # eg f"There have been huge layoffs in {username}'s company. {username} is feeling down and needs a friend to talk to."
-MBTI = "YOUR MYERS BRIGGS TYPE" # eg "ENTP or INTP" - will affect how couch responds to you
-Gen = "COUCH GEN" # eg "GenX", "Millenial" or "GenZ" - will affect the personality of couch
+# read in user settings from env vars
+openai.api_key = os.environ.get('OPENAI_API_KEY') # set your OpenAI API key here - https://beta.openai.com/docs/api-reference/authentication
+username = os.environ.get('COUCH_USERNAME')
+MBTI = os.environ.get('COUCH_MBTI') # eg "ENTP or INTP" - will affect how couch responds to you
+Gen = os.environ.get('COUCH_GEN') # eg "boomer" "GenX", "Millenial" or "GenZ" - will affect the personality of couch
+situation = f"There have been huge layoffs in {username}'s company. {username} is feeling down and needs a friend to talk to."
 languages = "English" # note: only English is supported at the moment
 
 # internals - ignore
@@ -214,7 +217,22 @@ while True:
   """)
 
   # use macbook text to speech to read response, escaping special chars
-  os.system("say  " + marv_response.replace("'", "\\'"))
+  #os.system("say  " + marv_response.replace("'", "\\'"))
+
+  marvi_response = marv_response.replace("'", "'\\''")
+  print(marvi_response)
+
+  # use elevenlabs TTS
+  curlish = f"""curl -X 'POST' \
+  'https://api.elevenlabs.io/v1/text-to-speech/TxGEqnHWrfWFTfGW9XjX' \
+  -H 'accept: audio/mpeg' \
+  -H 'xi-api-key: {os.environ.get('ELEVENLABS_API_KEY')}' \
+  -H 'Content-Type: application/json' \
+  -d '{{"text": "{marvi_response}"}}' \
+  --output 'tts.mp3'"""
+  mp3_play = "afplay tts.mp3"
+  os.system(curlish)
+  os.system(mp3_play)
 
   # if user said "bye" then exit the program
   exit_phrase =  prompt.lower().strip().replace(".", "")  
