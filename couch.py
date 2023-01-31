@@ -187,7 +187,7 @@ while True:
   if is_test:
     prompt = test_prompt  
   elif is_first:
-    prompt = "Hello"
+    prompt = "Hello, good to see you again"
     is_first = False
   else:
     record_audio()

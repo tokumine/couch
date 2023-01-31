@@ -18,17 +18,18 @@ couch.py is a little AI tool to conversationally explore your own thoughts and f
 3. OpenAI python library: https://github.com/openai/openai-python
 4. python pyaudio (and it's dependencies): https://cs.gmu.edu/~marks/112/projects/PlaySong.pdf
 5. OpenAI account and API key: https://beta.openai.com/docs/api-reference/authentication
-6. currently uses inbuilt MacOS "sayTTS" for TTS. So needs OSX. Will change this.
+6. Elevenlabs account for TTS: https://beta.elevenlabs.io/
+6. currently uses inbuilt MacOS "afplay" for TTS playback. So needs OSX. Will change this.
 
 ## Usage:
 1. Install the requirements
-2. Set your OpenAI API key in couch.py
-3. Set your name, MBTI personality type, spoken languages and generation in couch.py
+2. Copy .env_sample to .env and set your OpenAI and Elevenlabs API keys
+3. Set your name, MBTI personality type in .env
 4. Run: `sudo python couch.py` (sudo needed for audio on mac)
 5. Audio will be recorded in a turntaking fashion 
 6. Press space to stop recording your turn (first time couch will download the whisper model)
-7. Say "bye" to exit
+7. Say "bye" to exit (buggy)
 
 ## TODO
 1. fix multilingual 
-2. make TTS less dependent on OSX
+2. make TTS playback less dependent on OSX
